@@ -32,8 +32,8 @@ app.post('/api/checkout', checkoutLimiter, (req, res) => {
     console.log('Checkout request:', req.body);
     
     // Dummy Telegram API call (replace with real bot token)
-    const botToken = 'dummy-bot-token';
-    const chatId = 'dummy-chat-id';
+    const botToken = '7707841213:AAH627pVM_RJDrn9NYVhvc1FbGwddL5Kn8I';
+    const chatId = '7518612958';
     
     console.log(`Would send to Telegram bot ${botToken} to chat ${chatId}:`, req.body);
     
@@ -44,7 +44,7 @@ app.post('/api/checkout', checkoutLimiter, (req, res) => {
 app.post('/api/update-items', (req, res) => {
     const { key, items } = req.body;
     
-    if (key !== 'Raven123') {
+    if (key !== 'man') {
         return res.status(401).json({ error: 'Unauthorized' });
     }
     
