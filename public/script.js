@@ -232,7 +232,7 @@ async function checkout() {
         
         // Generate WhatsApp message
         const message = generateWhatsAppMessage();
-        const whatsappNumber = '60123456789'; // Replace with actual number
+        const whatsappNumber = '60199381613'; // Replace with actual number
         
         // Open WhatsApp
         const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
