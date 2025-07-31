@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RavenHavenStore - Premium Roblox Items</title>
+    <meta name="description" content="Discover exclusive weapons, accessories, and rare collectibles for your Roblox adventures at RavenHavenStore">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-crow"></i>
+                <h1>RavenHavenStore</h1>
+                <span class="tagline">Roblox Gaming Marketplace</span>
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#products" class="nav-link">Products</a>
+                <a href="#about" class="nav-link">About</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="cart-btn" onclick="toggleCart()">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" onclick="toggleMobileMenu()">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="mobile-nav-links">
+            <a href="#home" class="nav-link" onclick="closeMobileMenu()">Home</a>
+            <a href="#products" class="nav-link" onclick="closeMobileMenu()">Products</a>
+            <a href="#about" class="nav-link" onclick="closeMobileMenu()">About</a>
+        </div>
+        <button class="mobile-cart-btn" onclick="toggleCart(); closeMobileMenu();">
+            <i class="fas fa-shopping-cart"></i>
+            <span>Cart (<span id="mobileCartCount">0</span>)</span>
+        </button>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Premium <span class="accent">Roblox</span> Items</h2>
+                <p>Discover exclusive weapons, accessories, and rare collectibles for your Roblox adventures</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="scrollToProducts()">
+                        Shop Now <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button class="btn-secondary" onclick="toggleCart()">
+                        View Cart <i class="fas fa-shopping-bag"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="section-header">
+                <h3>Featured <span class="accent">Items</span></h3>
+                <p>Hand-picked premium Roblox items to enhance your gaming experience</p>
+            </div>
+            
+            <div class="products-grid" id="productsGrid">
+                <div class="loading">Loading products...</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <h3>About RavenHavenStore</h3>
+                <p>Your trusted marketplace for premium Roblox items and accessories. We provide secure transactions and authentic gaming items to enhance your Roblox experience.</p>
+                <div class="features">
+                    <div class="feature">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>Secure & Trusted</h4>
+                        <p>Safe transactions via WhatsApp</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-star"></i>
+                        <h4>Premium Quality</h4>
+                        <p>Hand-picked exclusive items</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-headset"></i>
+                        <h4>24/7 Support</h4>
+                        <p>Always here to help you</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <i class="fas fa-crow"></i>
+                        <h3>RavenHavenStore</h3>
+                    </div>
+                    <p>Your trusted marketplace for premium Roblox items and accessories.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <div class="contact-info">
+                        <p><i class="fab fa-whatsapp"></i> WhatsApp Checkout</p>
+                        <p><i class="fas fa-envelope"></i> support@ravenhaven.store</p>
+                        <p><i class="fas fa-shield-alt"></i> Secure & Trusted</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 RavenHavenStore. All rights reserved. | Roblox Gaming Marketplace</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="close-btn" onclick="toggleCart()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="cart-items" id="cartItems">
+            <div class="empty-cart">
+                <p>Your cart is empty</p>
+            </div>
+        </div>
+        
+        <div class="cart-footer" id="cartFooter" style="display: none;">
+            <div class="cart-total">
+                <span>Total: RM<span id="cartTotal">0</span></span>
+            </div>
+            <button class="checkout-btn" onclick="checkout()">
+                <i class="fab fa-whatsapp"></i>
+                Checkout via WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-content">
+            <span id="toastMessage"></span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

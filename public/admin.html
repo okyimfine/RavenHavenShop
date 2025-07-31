@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - RavenHavenStore</title>
+    <meta name="description" content="Admin panel for managing RavenHavenStore inventory and products">
+    <link rel="stylesheet" href="admin.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Access Check -->
+    <div id="accessDenied" class="access-denied">
+        <div class="access-card">
+            <div class="access-header">
+                <i class="fas fa-lock"></i>
+                <h2>Access Denied</h2>
+            </div>
+            <div class="access-content">
+                <p>Invalid admin key. Access requires:</p>
+                <code>?key=Raven123</code>
+                <button class="back-btn" onclick="goToStore()">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Store
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Panel -->
+    <div id="adminPanel" class="admin-panel" style="display: none;">
+        <!-- Header -->
+        <header class="admin-header">
+            <div class="container">
+                <div class="header-content">
+                    <h1><i class="fas fa-crown"></i> RavenHaven Admin Panel</h1>
+                    <button class="back-btn" onclick="goToStore()">
+                        <i class="fas fa-arrow-left"></i>
+                        Back to Store
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <div class="container">
+                <!-- Statistics -->
+                <section class="stats-section">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-content">
+                                <div class="stat-info">
+                                    <h3>Total Items</h3>
+                                    <p class="stat-number" id="totalItems">0</p>
+                                </div>
+                                <div class="stat-icon">
+                                    <i class="fas fa-box"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-content">
+                                <div class="stat-info">
+                                    <h3>Total Value</h3>
+                                    <p class="stat-number" id="totalValue">RM0</p>
+                                </div>
+                                <div class="stat-icon">
+                                    <i class="fas fa-dollar-sign"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-content">
+                                <div class="stat-info">
+                                    <h3>In Stock</h3>
+                                    <p class="stat-number" id="totalStock">0</p>
+                                </div>
+                                <div class="stat-icon">
+                                    <i class="fas fa-warehouse"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-content">
+                                <div class="stat-info">
+                                    <h3>Avg Price</h3>
+                                    <p class="stat-number" id="avgPrice">RM0</p>
+                                </div>
+                                <div class="stat-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Item Management -->
+                <section class="management-section">
+                    <div class="section-header">
+                        <h2><i class="fas fa-edit"></i> Manage Items</h2>
+                        <div class="section-actions">
+                            <button class="save-btn" onclick="saveAllChanges()" id="saveBtn">
+                                <i class="fas fa-save"></i>
+                                Save All Changes
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="items-container" id="itemsContainer">
+                        <div class="loading">
+                            <i class="fas fa-spinner fa-spin"></i>
+                            Loading items...
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-content">
+            <span id="toastMessage"></span>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
