@@ -59,7 +59,7 @@ app.post('/api/update-items', (req, res) => {
 
 // Serve admin panel
 app.get('/admin', (req, res) => {
-    if (req.query.key !== 'Raven123') {
+    if (req.query.key !== 'man') {
         return res.status(401).send('Access denied. Invalid key.');
     }
     res.sendFile(path.join(__dirname, 'public', 'admin.html'));
