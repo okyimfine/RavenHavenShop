@@ -1,0 +1,58 @@
+[
+  {
+    "id": "1",
+    "name": "Dominus Empyreus",
+    "description": "Legendary crown accessory",
+    "price": 25,
+    "quantity": 5,
+    "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&w=400&h=300&fit=crop"
+  },
+  {
+    "id": "2",
+    "name": "Plasma Blade X",
+    "description": "Epic weapon gear",
+    "price": 15,
+    "quantity": 8,
+    "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&w=400&h=300&fit=crop&auto=format"
+  },
+  {
+    "id": "3",
+    "name": "Seraphim Wings",
+    "description": "Mythical back accessory",
+    "price": 20,
+    "quantity": 3,
+    "image": "https://pixabay.com/get/g220c0c849fbc531a560d2715697eb212ab937590d98b8bd5224ba0ce229c1fe84eaf1a023b32a9dc96103539ab40edcc4d084f6cc38b97da0f33c139d045a5ef_1280.jpg"
+  },
+  {
+    "id": "4",
+    "name": "Shadow Dragon",
+    "description": "Rare pet companion",
+    "price": 30,
+    "quantity": 2,
+    "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&w=400&h=300&fit=crop"
+  },
+  {
+    "id": "5",
+    "name": "Neon Shades",
+    "description": "Cool face accessory",
+    "price": 8,
+    "quantity": 12,
+    "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?ixlib=rb-4.0.3&w=400&h=300&fit=crop"
+  },
+  {
+    "id": "6",
+    "name": "Valiant Armor",
+    "description": "Legendary armor set",
+    "price": 35,
+    "quantity": 4,
+    "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&w=400&h=300&fit=crop"
+  },
+  {
+    "id": "7",
+    "name": "VIP Elite Pass",
+    "description": "Premium game access",
+    "price": 50,
+    "quantity": 10,
+    "image": "https://pixabay.com/get/gdb74c9b432372eca28202ee1154b83e875d2946d046ec01224141508184446e6801da021a215d1b1f2707408c52db739b1e61a9ff816ca5561f54322fc88f4fa_1280.jpg"
+  }
+]
